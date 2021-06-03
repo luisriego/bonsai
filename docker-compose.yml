@@ -1,0 +1,54 @@
+version: '3.5'
+
+services:
+  bonsai-web:
+    container_name: bonsai-web
+    build:
+      context: ./docker/nginx
+      args:
+        UID: $U_ID
+    ports:
+      - 1200:80
+    volumes:
+      - ./public:/appdata/www/public
+    depends_on:
+      - bonsai-be
+    networks:
+      - bonsai-network
+
+  bonsai-be:
+    container_name: bonsai-be
+    build:
+      context: docker/php
+      args:
+        UID: $U_ID
+    volumes:
+      - ./:/appdata/www
+    env_file:
+      - .env
+    depends_on:
+      - bonsai-db
+    networks:
+      - bonsai-network
+
+  bonsai-db:
+    container_name: bonsai-db
+    build:
+      context: ./docker/database
+    ports:
+      - 36100:3306
+    environment:
+      MYSQL_DATABASE: application_database
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - bonsai-db-data:/var/lib/mysql
+    networks:
+      - bonsai-network
+    command: [ 'mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci' ]
+
+volumes:
+  bonsai-db-data:
+
+networks:
+  bonsai-network:
+    external: true
