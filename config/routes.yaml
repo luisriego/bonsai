@@ -6,3 +6,18 @@ api_health_check:
   path: /api/v1/health-check
   controller: App\Controller\HealthCheckController
   methods: [GET]
+
+api_bonsai_regar:
+  path: /api/v1/bonsai/regar
+  controller: App\Controller\Bonsai\RegarBonsaiController
+  methods: [POST]
+
+api_bonsai_abonar:
+  path: /api/v1/bonsai/abonar
+  controller: App\Controller\Bonsai\AbonarBonsaiController
+  methods: [POST]
+
+api_bonsai_transplantar:
+  path: /api/v1/bonsai/transplantar
+  controller: App\Controller\Bonsai\TransplantarBonsaiController
+  methods: [POST]

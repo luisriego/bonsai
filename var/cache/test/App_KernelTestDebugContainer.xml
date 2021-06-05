@@ -70,9 +70,25 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
+    <service id="App\Controller\Bonsai\AbonarBonsaiController" class="App\Controller\Bonsai\AbonarBonsaiController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <argument type="service" id="App\Services\AbonarService"/>
+    </service>
+    <service id="App\Controller\Bonsai\RegarBonsaiController" class="App\Controller\Bonsai\RegarBonsaiController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <argument type="service" id="App\Services\RegarService"/>
+    </service>
+    <service id="App\Controller\Bonsai\TransplantarBonsaiController" class="App\Controller\Bonsai\TransplantarBonsaiController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <argument type="service" id="App\Services\TransplantarService"/>
+    </service>
     <service id="App\Controller\HealthCheckController" class="App\Controller\HealthCheckController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
+    <service id="App\Services\AbonarService" class="App\Services\AbonarService" autowire="true" autoconfigure="true"/>
+    <service id="App\Services\PulverizarService" class="App\Services\PulverizarService" autowire="true" autoconfigure="true"/>
+    <service id="App\Services\RegarService" class="App\Services\RegarService" autowire="true" autoconfigure="true"/>
+    <service id="App\Services\TransplantarService" class="App\Services\TransplantarService" autowire="true" autoconfigure="true"/>
     <service id="controller_resolver" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="service_container"/>
@@ -912,6 +928,10 @@
     <service id="test.private_services_locator" class="Symfony\Component\DependencyInjection\ServiceLocator" public="true">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Services\AbonarService" type="service_closure" id="App\Services\AbonarService" on-invalid="ignore_uninitialized"/>
+        <argument key="App\Services\PulverizarService" type="service_closure" id="App\Services\PulverizarService" on-invalid="ignore_uninitialized"/>
+        <argument key="App\Services\RegarService" type="service_closure" id="App\Services\RegarService" on-invalid="ignore_uninitialized"/>
+        <argument key="App\Services\TransplantarService" type="service_closure" id="App\Services\TransplantarService" on-invalid="ignore_uninitialized"/>
         <argument key="Psr\Cache\CacheItemPoolInterface" type="service_closure" id="cache.app" on-invalid="ignore_uninitialized"/>
         <argument key="Psr\Container\ContainerInterface" type="service_closure" id="service_container" on-invalid="ignore_uninitialized"/>
         <argument key="Psr\Container\ContainerInterface $parameterBag" type="service_closure" id="parameter_bag" on-invalid="ignore_uninitialized"/>

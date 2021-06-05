@@ -8,6 +8,8 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
+        '/api/v1/health-check' => [[['_route' => 'api_health_check', '_controller' => 'App\\Controller\\HealthCheckController'], null, ['GET' => 0], null, false, false, null]],
+        '/api/v1/bonsai/regar' => [[['_route' => 'api_bonsai_regar', '_controller' => 'App\\Controller\\Bonsai\\RegarBonsaiController'], null, ['POST' => 0], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
