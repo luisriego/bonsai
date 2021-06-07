@@ -24,6 +24,15 @@ class TransplantarControllerTest extends WebTestCase
         }
     }
 
+    public function testTransplantarEnMarzo(): void
+    {
+        self::$client->request(Request::METHOD_POST, self::ENDPOINT, [], [], [], \json_encode([]));
+
+        $response = self::$client->getResponse();
+
+        self::assertEquals(JsonResponse::HTTP_OK, $response->getStatusCode());
+    }
+
     public function testTransplantar(): void
     {
         self::$client->request(Request::METHOD_POST, self::ENDPOINT, [], [], [], \json_encode([]));

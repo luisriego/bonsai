@@ -18,11 +18,11 @@ class RegarService
         }
 
         if ($type === 'MANZANO') {
-            return "frequente";
+            return 'frequente';
         }
 
         if ($type === 'OLMO') {
-            return "muy frequente";
+            return 'muy frequente';
         }
 
         if ($type === 'FICUS' || $type === 'OLIVO') {

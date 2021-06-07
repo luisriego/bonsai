@@ -4,4 +4,8 @@
 
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
+    'api_health_check' => [[], ['_controller' => 'App\\Controller\\HealthCheckController'], [], [['text', '/api/v1/health-check']], [], []],
+    'api_bonsai_regar' => [[], ['_controller' => 'App\\Controller\\Bonsai\\RegarBonsaiController'], [], [['text', '/api/v1/bonsai/regar']], [], []],
+    'api_bonsai_abonar' => [[], ['_controller' => 'App\\Controller\\Bonsai\\AbonarBonsaiController'], [], [['text', '/api/v1/bonsai/abonar']], [], []],
+    'api_bonsai_transplantar' => [[], ['_controller' => 'App\\Controller\\Bonsai\\TransplantarBonsaiController'], [], [['text', '/api/v1/bonsai/transplantar']], [], []],
 ];

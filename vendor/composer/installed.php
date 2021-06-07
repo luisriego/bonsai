@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '02f8ef7ffd424406722789b5cbae059ec0ae1957',
+        'reference' => 'b365f5053349b84a6dbff83a6beaa188013d93ca',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '02f8ef7ffd424406722789b5cbae059ec0ae1957',
+            'reference' => 'b365f5053349b84a6dbff83a6beaa188013d93ca',
             'dev_requirement' => false,
         ),
         'doctrine/instantiator' => array(
@@ -39,6 +39,15 @@
             'replaced' => array(
                 0 => '1.10.2',
             ),
+        ),
+        'nesbot/carbon' => array(
+            'pretty_version' => '2.48.1',
+            'version' => '2.48.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nesbot/carbon',
+            'aliases' => array(),
+            'reference' => '8d1f50f1436fb4b05e7127360483dd9c6e73da16',
+            'dev_requirement' => false,
         ),
         'nikic/php-parser' => array(
             'pretty_version' => 'v4.10.5',
@@ -672,6 +681,30 @@
             'aliases' => array(),
             'reference' => 'abd6bb17be75ddb10b022f02820464b785882a7f',
             'dev_requirement' => false,
+        ),
+        'symfony/translation' => array(
+            'pretty_version' => 'v5.2.10',
+            'version' => '5.2.10.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/translation',
+            'aliases' => array(),
+            'reference' => 'dc49cfb0d1d1bf6a9aaccccee570ef62e7b095c4',
+            'dev_requirement' => false,
+        ),
+        'symfony/translation-contracts' => array(
+            'pretty_version' => 'v2.4.0',
+            'version' => '2.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/translation-contracts',
+            'aliases' => array(),
+            'reference' => '95c812666f3e91db75385749fe219c5e494c7f95',
+            'dev_requirement' => false,
+        ),
+        'symfony/translation-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '2.3',
+            ),
         ),
         'symfony/var-dumper' => array(
             'pretty_version' => 'v5.2.10',

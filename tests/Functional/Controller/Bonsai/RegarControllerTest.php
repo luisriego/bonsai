@@ -5,6 +5,7 @@ namespace App\Tests\Functional\Controller\Bonsai;
 
 
 use App\Utils\Bonsai\Type;
+use App\Utils\DateTimeForMocks;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -32,6 +33,58 @@ class RegarControllerTest extends WebTestCase
         $response = self::$client->getResponse();
 
         self::assertEquals(JsonResponse::HTTP_BAD_REQUEST, $response->getStatusCode());
+    }
+
+    public function testRegarManzano(): void
+    {
+        $payload = [
+            'type' => Type::MANZANO,
+        ];
+
+        self::$client->request(Request::METHOD_POST, self::ENDPOINT, [], [], [], \json_encode($payload));
+
+        $response = self::$client->getResponse();
+
+        self::assertEquals('frequente', json_decode($response->getContent()));
+    }
+
+    public function testRegarFicus(): void
+    {
+        $payload = [
+            'type' => Type::FICUS,
+        ];
+
+        self::$client->request(Request::METHOD_POST, self::ENDPOINT, [], [], [], \json_encode($payload));
+
+        $response = self::$client->getResponse();
+
+        self::assertEquals('poco frequente', json_decode($response->getContent()));
+    }
+
+    public function testRegarOlmo(): void
+    {
+        $payload = [
+            'type' => Type::OLMO,
+        ];
+
+        self::$client->request(Request::METHOD_POST, self::ENDPOINT, [], [], [], \json_encode($payload));
+
+        $response = self::$client->getResponse();
+
+        self::assertEquals('muy frequente', json_decode($response->getContent()));
+    }
+
+    public function testRegarOlivo(): void
+    {
+        $payload = [
+            'type' => Type::OLIVO,
+        ];
+
+        self::$client->request(Request::METHOD_POST, self::ENDPOINT, [], [], [], \json_encode($payload));
+
+        $response = self::$client->getResponse();
+
+        self::assertEquals('poco frequente', json_decode($response->getContent()));
     }
 
     public function testRegarJulioAgosto(): void
