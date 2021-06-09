@@ -4,15 +4,17 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
-use App\Utils\Bonsai\Type;
+use App\Controller\Pulverizar;
+use App\Controller\Regar;
+use App\Utils\Bonsai\Tipo;
 
 class Bonsai
 {
     private string $id;
-    private string $type;
+    private string $tipo;
 
-    public function __construct($id, $type) {
-        $this->type = Type::MANZANO;
+    public function __construct($id, $tipo) {
+        $this->tipo = Tipo::MANZANO;
     }
 
     public function getId(): string
@@ -22,35 +24,35 @@ class Bonsai
 
     public function getType(): string
     {
-        return $this->type;
+        return $this->tipo;
     }
 
-    public function setType(string $type): void
+    public function setType(string $tipo): void
     {
-        $this->type = $type;
+        $this->tipo = $tipo;
     }
 
-    public function Riego($type): void
-    {
-
-    }
-
-    public function Abono($type): void
+    public function Regar($tipo): void
     {
 
     }
-
-    public function Transplante($type): void
-    {
-
-    }
-
-    public function Pulverizar($type): void
-    {
-        if ($type !== Type::OLMO) {
-            // throws exception
-        }
-
-
-    }
+//
+//    public function Abono($tipo): void
+//    {
+//
+//    }
+//
+//    public function Transplante($tipo): void
+//    {
+//
+//    }
+//
+//    public function Pulverizar($tipo): void
+//    {
+//        if ($tipo !== Tipo::OLMO) {
+//            // throws exception
+//        }
+//
+//
+//    }
 }
