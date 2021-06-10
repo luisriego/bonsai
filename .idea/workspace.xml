@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbc8bcc9-452f-409d-95b2-f1c660e6e98a" name="Default Changelist" comment="" />
+    <list default="true" id="cbc8bcc9-452f-409d-95b2-f1c660e6e98a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/Services/Bonsai/BonsaiServiceTestBase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Services/Bonsai/RegarServicesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Bonsai.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bonsai.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/RegarService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/RegarService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Services/RegarServicesTest.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,7 +157,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -160,6 +168,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\home\luisriego\Docker\Symfony\bonsai\tests\Services\Bonsai" />
       <recent name="$PROJECT_DIR$" />
       <recent name="\\wsl$\Ubuntu-20.04\home\luisriego\Docker\Symfony\fidel" />
     </key>

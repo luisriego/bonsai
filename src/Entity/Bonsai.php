@@ -36,23 +36,4 @@ class Bonsai
     {
 
     }
-//
-//    public function Abono($tipo): void
-//    {
-//
-//    }
-//
-//    public function Transplante($tipo): void
-//    {
-//
-//    }
-//
-//    public function Pulverizar($tipo): void
-//    {
-//        if ($tipo !== Tipo::OLMO) {
-//            // throws exception
-//        }
-//
-//
-//    }
 }

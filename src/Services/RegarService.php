@@ -6,31 +6,42 @@ namespace App\Services;
 
 class RegarService
 {
-    public function __construct()
-    { }
 
-    public function regarBonsai(string $type): string
+    private ?int $month;
+
+    public function __construct(int $month = null)
     {
-        $month = date('m');
+        $this->month = $month;
 
-        if ($month > 7 && $month < 9) {
-            return "muy frequente";
+        if (null === $month) {
+            $this->month = date('m');
+        }
+    }
+
+    public function regarBonsai(string $type): ?string
+    {
+//        $month = date('m');
+
+        if ($this->month >= 7 && $this->month <= 8) {
+            return "muy frecuente";
         }
 
         if ($type === 'MANZANO') {
-            return "frequente";
+            return "frecuente";
         }
 
         if ($type === 'OLMO') {
-            return "muy frequente";
+            return "muy frecuente";
         }
 
         if ($type === 'FICUS') {
-            return "poco frequente";
+            return "poco frecuente";
         }
 
         if ($type === 'OLIVO') {
-            return "poco frequente";
+            return "poco frecuente";
         }
+
+        return null;
     }
 }
