@@ -4,20 +4,33 @@
 namespace App\Services;
 
 
+use App\Utils\SeasonByDate;
+
 class AbonarService
 {
-    public function __construct()
-    { }
+    private ?\DateTime $dateTime;
 
-    public function abonarBonsai(): bool
+    public function __construct(\DateTime $dateTime = null)
     {
-        $month = date('m');
+        $this->dateTime = $dateTime;
 
-        if ($month > '02' && $month < '06') {
-            return true;
+        if (null === $dateTime) {
+            $this->dateTime = new \DateTime();
+        }
+    }
+
+    public function abonarBonsai(\DateTime $ultimoAbono): bool
+    {
+        $diff = $ultimoAbono->diff($this->dateTime);
+        if ($diff->days <= 30) {
+            return false;
         }
 
-        if ($month > '08' && $month < '12') {
+        /** @var SeasonByDate $season */
+        $season  = new SeasonByDate;
+        $actualSeason = $season->timestampToSeason($this->dateTime);
+
+        if ($actualSeason === 'spring' || $actualSeason === 'fall') {
             return true;
         }
 

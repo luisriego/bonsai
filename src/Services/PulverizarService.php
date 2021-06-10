@@ -6,15 +6,12 @@ namespace App\Services;
 
 class PulverizarService
 {
-    public function __construct()
-    { }
-
-    public function pulverizarOlmo(string $type): bool
+    public function pulverizarOlmo(string $type): ?string
     {
-        if ($type === 'OLMO') {
-            return true;
+        if ($type !== 'OLMO') {
+            return null;
         }
 
-        return false;
+        return "muy frecuente";
     }
 }

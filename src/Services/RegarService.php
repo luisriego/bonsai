@@ -6,7 +6,6 @@ namespace App\Services;
 
 class RegarService
 {
-
     private ?int $month;
 
     public function __construct(int $month = null)
@@ -20,8 +19,6 @@ class RegarService
 
     public function regarBonsai(string $type): ?string
     {
-//        $month = date('m');
-
         if ($this->month >= 7 && $this->month <= 8) {
             return "muy frecuente";
         }

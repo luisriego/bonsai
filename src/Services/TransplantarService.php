@@ -6,14 +6,20 @@ namespace App\Services;
 
 class TransplantarService
 {
-    public function __construct()
-    { }
+    private ?int $month;
+
+    public function __construct(int $month = null)
+    {
+        $this->month = $month;
+
+        if (null === $month) {
+            $this->month = date('m');
+        }
+    }
 
     public function transplantarBonsai(): bool
     {
-        $month = date('m');
-
-        if ($month == 3) {
+        if ($this->month == 3) {
             return true;
         }
 

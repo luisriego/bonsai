@@ -104,6 +104,8 @@ return [[
 '[C]App%5CEntity%5CBonsai%23getType' => 1,
 'App%5CEntity%5CBonsai%23setType' => 0,
 '[C]App%5CEntity%5CBonsai%23setType' => 1,
+'App%5CEntity%5CBonsai%23Regar' => 0,
+'[C]App%5CEntity%5CBonsai%23Regar' => 1,
 'App%5CEntity%5CBonsai%24id' => 0,
 '[C]App%5CEntity%5CBonsai%24id' => 1,
 'App%5CEntity%5CBonsai%24tipo' => 0,
@@ -568,6 +570,6 @@ return [[
 ], [
 
 0 => [],
-1 => 1622737926,
+1 => 1623327227,
 
 ]];

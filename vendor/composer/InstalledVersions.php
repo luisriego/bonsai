@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '9ea1a435c35c0468d91dbde3fce038fd0921af6a',
+    'reference' => 'c8651e169255585dba5022427b6c67599d71fb2d',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9ea1a435c35c0468d91dbde3fce038fd0921af6a',
+      'reference' => 'c8651e169255585dba5022427b6c67599d71fb2d',
     ),
     'composer/package-versions-deprecated' => 
     array (
@@ -52,6 +52,20 @@ private static $installed = array (
       array (
       ),
       'reference' => 'c6522afe5540d5fc46675043d3ed5a45a740b27c',
+    ),
+    'cordoval/hamcrest-php' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
+    ),
+    'davedevelopment/hamcrest-php' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
     ),
     'doctrine/annotations' => 
     array (
@@ -206,6 +220,22 @@ private static $installed = array (
       ),
       'reference' => '006aa5d32f887a4db4353b13b5b5095613e0611f',
     ),
+    'hamcrest/hamcrest-php' => 
+    array (
+      'pretty_version' => 'v2.0.1',
+      'version' => '2.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8c3d0a3f6af734494ad8f6fbbee0ba92422859f3',
+    ),
+    'kodova/hamcrest-php' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
+    ),
     'laminas/laminas-code' => 
     array (
       'pretty_version' => '4.3.0',
@@ -232,6 +262,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '6cccbddfcfc742eb02158d6137ca5687d92cee32',
+    ),
+    'mockery/mockery' => 
+    array (
+      'pretty_version' => '1.4.3',
+      'version' => '1.4.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd1339f64479af1bee0e82a0413813fe5345a54ea',
     ),
     'myclabs/deep-copy' => 
     array (

@@ -9,7 +9,7 @@ use App\Services\RegarService;
 use App\Utils\Bonsai\Tipo;
 use PHPUnit\Framework\TestCase;
 
-class RegarServicesTest extends BonsaiServiceTestBase
+class RegarServicesTest extends TestCase
 {
     private RegarService $service;
 
@@ -62,7 +62,6 @@ class RegarServicesTest extends BonsaiServiceTestBase
 
         $result = $this->service->regarBonsai($tipo);
 
-//        $this->assertEquals('poco frecuente', $result);
         self::assertNull($result);
     }
 
@@ -77,6 +76,7 @@ class RegarServicesTest extends BonsaiServiceTestBase
         $this->assertEquals('muy frecuente', $result);
     }
 
+    /** @Test*/
     public function testRegarOlivoJulio()
     {
         $this->service = new RegarService(7);
@@ -87,4 +87,20 @@ class RegarServicesTest extends BonsaiServiceTestBase
 
         $this->assertEquals('muy frecuente', $result);
     }
+
+
+//    public function it_should_return_true_when_its_morning()
+//    {
+//        $clock = Mockery::mock(ClockMock::class);
+//
+//        $clock->shouldReceive('now')
+//            ->once()
+//            ->andReturn(new \DateTimeImmutable('2019-05-20 09:00:00'));
+//
+//        $checker = new MorningChecker($clock);
+//
+//        $this->assertTrue($checker->check());
+//
+//        Mockery::close();
+//    }
 }

@@ -10,12 +10,15 @@
 ### Installation:
 - Run `make build` to create all containers 
 - Run `make start` to spin up containers
-- Enter the PHP container with `make ssh-be`
-- Install your favourite Symfony version with `composer create-project symfony/skeleton project [version (e.g. 5.2.*)]`
-- Move the content to the root folder with `mv project/* . && mv project/.env .`. This is necessary since Composer won't install the project if the folder already contains data.
-- Copy the content from `project/.gitignore` and paste it in the root's folder `.gitignore`
-- Remove `project` folder (not needed anymore)
-- Navigate to `localhost:1000` so you can see the Symfony welcome page :)
+- Run `make prepare` to install dependencies
+
+## Bonus
+Podriamos alterar el método Utils/SeasonByDate para que acepte el hemisferio como parametro (o lo busque por el IP) y 
+a partir de ahí alterar las referencias de estación del año. 
+
+
+
+
 
 Happy coding!
 
